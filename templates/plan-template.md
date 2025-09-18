@@ -59,7 +59,7 @@ scripts:
 
 ### Documentation (this feature)
 ```
-specs/[###-feature]/
+design-specs/[###-feature]/
 ├── plan.md              # This file (/plan command output)
 ├── research.md          # Phase 0 output (/plan command)
 ├── data-model.md        # Phase 1 output (/plan command)
@@ -70,40 +70,39 @@ specs/[###-feature]/
 
 ### Source Code (repository root)
 ```
-# Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
+# Option 1: Puppet Module (DEFAULT)
 
-tests/
-├── contract/
-├── integration/
-└── unit/
+data/
 
-# Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
+files/
 
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
+manifests/
 
-# Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
+spec/ 
+├── classes/
+├── defines/
+├── applications/
+├── functions/
+├── types/
+├── type_aliases/
+└── hosts/
 
-ios/ or android/
-└── [platform-specific structure]
-```
+templates/
+
+lib/
+├── facter/
+└── puppet/
+    └── functions/
+
+# Option 2: Puppet Control Repo (when "control-repo" detected)
+
+data/
+
+manifests/
+
+scripts/
+
+site-modules/
 
 **Structure Decision**: [DEFAULT to Option 1 unless Technical Context indicates web/mobile app]
 
