@@ -85,7 +85,8 @@ spec/
 ├── functions/
 ├── types/
 ├── type_aliases/
-└── hosts/
+├── hosts/
+└── plans/
 
 templates/
 
@@ -93,6 +94,10 @@ lib/
 ├── facter/
 └── puppet/
     └── functions/
+
+tasks/
+
+plans/
 
 # Option 2: Puppet Control Repo (when "control-repo" detected)
 
